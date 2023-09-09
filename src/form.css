@@ -1,0 +1,46 @@
+.form{
+    width:50vw;
+    background-color: rgb(68, 64, 64);
+    color: rgb(255, 136, 0);
+    padding: 1.5vw;
+    border-radius: 3vh;
+    font-weight: bold;
+    
+}
+input ,select{
+    margin-bottom: 1.5vh;
+    width: 100%;
+    outline-color: green;
+}
+
+
+button{
+    background-color: rgb(255, 136, 0);
+    color: white;
+    font-size: 16px;
+    padding: 7px;
+    border-radius: 5px;
+    width: auto;
+    border: none;
+    
+    
+}
+button:disabled{
+    background-color: rgb(128, 125, 123);
+    /* color: white; */
+    
+    
+    
+}
+option{
+    background-color: rgb(196, 188, 188);
+}
+input[type=checkbox]{
+accent-color: green;
+}
+.incorrect{
+    color: rgb(190, 2, 2);
+}
+.correct{
+    color: green;
+}
