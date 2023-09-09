@@ -187,7 +187,7 @@ function Form(){
         
         
     </form>
-    <Modal open={modal} className='modal'>{msg}</Modal>
+    <Modal open={modal} onClose={()=>setModal(false)}>{msg}</Modal>
     </div>
 }
 
