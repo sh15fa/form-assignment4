@@ -37,55 +37,15 @@ function Form(){
 
         setForm({...form,number:num});
         disableHandller();
-        // console.log(form.age);
-
-        // console.log(form.age);
-        
-        // if(num.length>=8 && num.length<=10){
-        //     setForm({...form,number:num});
-            // console.log(num.length);
-        //     msgNum='';
-        // }
-        // else{
-           
-        //     msgNum='Phone number is incorrect it must be between 8 and 10 numbers';
-        //     // msg.push('Phone number is incorrect it must be between 8 and 10 numbers');
-            // console.log(msgNum);
-            // console.log(form.age);
-            
-        // }
-        // disableHandller();
-
-       
     }
 
     function handleAge(e){
         let age=e.target.value;
-        // console.log(age);
-        setForm({...form,age:e.target.value});
+        setForm({...form,age:age});
         disableHandller();
-        // console.log('aggg'+form.name);
-        
-        // console.log(form.employee);
-        // if(age>=18 && age<=68){
-        //     setForm({...form,age:age});
-            // console.log(form.age);
-        //     msgAge='';
-        // }
-        // else{
-        //     msgAge='The Age Is Not Allow it must be between 18 and 68';
-            
-        //     // msg.push('The Age Is Not Allow it must be between 18 and 68');
-            // console.log(msgAge);
-        // }
-        // disableHandller();
-
-        
-
        
     }
     function handleCheckbox(e){
-        // console.log(e.target.checked);
         setForm({...form,employee:e.target.checked});
         
     }
@@ -94,61 +54,38 @@ function Form(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        // console.log('submitted');
-        // console.log(form);
         
-        
-    //     if(msgAge!==''){
-    //         msg.push(msgAge);
-    //     }
-    //    else if(msgNum!=='')
-    //     {
-    //         msg.push(msgNum);
-    //     }
-    //     else{
-    //         msg.push('You submitted successfully')
-    //     }
     let trueAge=form.age>=18 && form.age<=68;
     if(trueAge){
         setForm({...form,age:form.age});
-        // console.log(form.age);
         msgAge='';
     }
     else{
-        // setMsg("The Age Is Not Allow it must be between 18 and 68");
+        
         msgAge=<h4 className='incorrect'>The Age Is Not Allow it must be between 18 and 68</h4>;
         text.push(msgAge);
-        // msg.push('The Age Is Not Allow it must be between 18 and 68');
-        // console.log(msgAge);
+       
     }
     let trueNum=form.number.length>=8 && form.number.length<=10;
     if(trueNum){
         setForm({...form,number:form.number});
-        // console.log(form.number);
+       
         msgNum='';
     }
     else{
        
-        // setMsg("Phone number is incorrect it must be between 8 and 10 numbers");
         msgNum=<h4 className='incorrect'>Phone number is incorrect it must be between 8 and 10 numbers</h4>;
-        // console.log(msgNum);
         text.push(msgNum);
-        // console.log(form.age);
 
         
     }
     if(trueAge && trueNum){
         let correct=<h4 className='correct'>your submit successfully</h4>;
-        // console.log(msgNum);
         text.push(correct);
     }
-    // console.log(text);
     setMsg([...text]);
-    // console.log(msg);
     }
     
-    // msg.push(msgAge);
-    //    console.log(msg);
    function handleName(e){
     let name=e.target.value;
     setForm({...form,name:name});
@@ -182,7 +119,6 @@ function Form(){
         </label>
 
         <br/>
-        {/* onClick={()=>setModal(true)} */}
         <button type="submit" disabled={!disable} onClick={()=>setModal(true)}>Submit</button>
         
         
