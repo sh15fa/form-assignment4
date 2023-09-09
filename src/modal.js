@@ -2,8 +2,7 @@ import ReactDOM  from "react-dom";
 import  './modal.css';
 import { useState } from "react";
 function Modal(props){
-    const [toggle,setToggle]=useState(props.onClose);
-    console.log(toggle);
+    
     let i=0;
     if(!props.open) return null;
     return ReactDOM.createPortal(
